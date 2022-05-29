@@ -322,7 +322,7 @@ button:hover{
         #loading_spinner{
             animation-duration: 3s;
             animation-name: spinner_animation;
-          visibility: hidden;
+            visibility: hidden;
 
         }
 
@@ -331,9 +331,9 @@ button:hover{
             100% {transform:  rotatex(90deg);visibility: visible}   
 
             }
-            #html_index {
-                transform: translateY(-375.2px);} 
-                /*pour eliminer le blanc tout en haut suite à spinner mais prob sur la version pc*/
+           #html_index {
+                transform: translateY(-95vw);} 
+               /*  pour eliminer le blanc tout en haut suite à spinner /
 
 .nouveau {
     background-color: #99E2D0;
