@@ -6,6 +6,7 @@
 * {
     box-sizing: border-box;
 }
+
 body{
     margin: 0;
     height: 0; /* pour effacer l'espace laissé vide (et blanc) suite à la translation de main*/
@@ -88,6 +89,8 @@ h4 {
     height: 40px;
     color: white;
     background: linear-gradient(to left top, #9356DC, #FF79DA);
+    border: none;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
    }
 
 footer{
@@ -259,7 +262,7 @@ button:hover{
 }
 
 .coeur:hover{
-    color:#9356DC;
+    background-color:#9356DC;
     transition-duration: 800ms;
 }
 
@@ -322,7 +325,7 @@ button:hover{
         #loading_spinner{
             animation-duration: 3s;
             animation-name: spinner_animation;
-            visibility: hidden;
+          visibility: hidden;
 
         }
 
@@ -331,9 +334,9 @@ button:hover{
             100% {transform:  rotatex(90deg);visibility: visible}   
 
             }
-           #html_index {
+            #html_index {
                 transform: translateY(-95vw);} 
-               /*  pour eliminer le blanc tout en haut suite à spinner /
+               /*  pour eliminer le blanc tout en haut suite à spinner */
 
 .nouveau {
     background-color: #99E2D0;
@@ -351,6 +354,10 @@ button:hover{
 .fiches_accueil{
     position: relative; /* pour positionner nouveau en absolu */
 
+}
+
+footer i {
+    width: 25px;
 }
 
 #hover_effect {
