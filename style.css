@@ -64,8 +64,7 @@ h4 {
 }
 
 .flex{
-    display: flex;
-    justify-content: space-between;}
+    display: flex;}
 
 
 .plat_generique{
@@ -124,7 +123,7 @@ padding-left: 10px;}
 ol  { 
     list-style-type: none;
     margin:0; 
-    width:  100%;
+    width:  90%;
     padding: 0 20px;
 }
 
@@ -385,23 +384,70 @@ footer i {
     width: 25px;
 }
 
-#hover_effect {
-    width: 1px; 
-    background-color: blue;
-    opacity: 1;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    overflow: hidden;
-}
+
 #flex_hover {
     display:flex;
     justify-content:space-between
     
 }
-.plat_generique:hover + #hover_effect {
-    transform: translateX(-30px) scalex(100)  ;opacity:1;
-    /*transform-origin:  right;*/
-    background-color: red;
-    border-radius: 20px;}
+
 
 .flex_fonctionnement li:hover{background-color: #9256dc4d;}
+
+main li{
+    position: relative;
+   overflow: hidden;
+}
+.plat-nom, .plat-prix, main ul{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.plat-desc {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    width: 90%; }
+
+.plat-prix {
+        text-align: right;
+
+    }
+    .coche-lateral {
+        position: absolute;
+        top: 0;
+        right: -20%;
+        height: 90%;
+        width: 20%;
+        background-color: #99E2D0;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .coche-lateral i {
+        color: white;
+        transition-duration: 1s;
+    }
+    main li:hover .coche-lateral, 
+main li:active .coche-lateral {
+    transition: right 1s ease-in-out;
+    right: 0;
+}
+
+
+
+main li:hover .plat-desc, 
+main li:active .plat-desc {
+    transition: width 1s ease-in-out;
+    width: 70%;
+}
+
+
+main li:hover .fa-check-circle,
+main li:active .fa-check-circle {
+    transform: rotate(360deg);
+   }
