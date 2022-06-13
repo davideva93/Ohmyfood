@@ -123,7 +123,7 @@ padding-left: 10px;}
 ol  { 
     list-style-type: none;
     margin:0; 
-    width:  90%;
+    width:  92%;
     padding: 0 20px;
 }
 
@@ -257,10 +257,11 @@ padding-bottom: 50px;}
     transform: translate(0 , 0)}
 
 .coeur_accueil{
-    align-items: center;
+ 
     display: flex;
-    padding-right: 2%;
-    width: 10%;
+    position: absolute;
+    font-size: 20px;
+  
     justify-content: flex-end;  }
 
 .fiches_accueil h4{
@@ -280,15 +281,13 @@ padding-bottom: 50px;}
     padding:0
 }
 
-button:hover{
+button:hover,
+button:active{
     opacity: 0.5;
     box-shadow: 15px 8px 8px #9356DC;
 }
 
-.coeur:hover{
-    background-color:#9356DC;
-    transition-duration: 800ms;
-}
+
 
 .entrees{
     animation-duration: 3s;
@@ -392,7 +391,8 @@ footer i {
 }
 
 
-.flex_fonctionnement li:hover{background-color: #9256dc4d;}
+.flex_fonctionnement:hover, .flex_fonctionnement:active{background-color: #9256dc4d;}
+.flex_fonctionnement:hover i, .flex_fonctionnement:active i{color: rgb(147,86,220);}
 
 main li{
     position: relative;
@@ -451,3 +451,55 @@ main li:hover .fa-check-circle,
 main li:active .fa-check-circle {
     transform: rotate(360deg);
    }
+   
+   .coeur_container {
+    
+ 
+    display: flex;
+    position: relative;
+ 
+}
+   .coeur_plein {
+z-index: 1;
+ position: absolute;
+    color:#9356DC;
+    font-size: 20px;
+    opacity: 0;
+}
+
+.coeur_plein:hover,
+.coeur_plein:active {
+    
+    opacity: 1;}
+
+    .coeur_container {
+        width: 20px;
+        height: 20px;}
+
+        img {
+            width: 100%;
+            max-height: 600px;
+            max-width: 600p;
+            object-fit: cover;}
+
+        @media (min-width: 660px)  {
+            #restaurants_accueil article{
+                max-width:300px ;
+          
+                }
+            #restaurants_accueil{
+                flex-direction: row ;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                    } 
+                    .h2_accueil{
+                        width:100%;
+                        padding-left:20px ;
+                  
+                        }
+                        .flex_fonctionnement h3 {
+                            width: 40%;
+                }
+           }
+
+           
