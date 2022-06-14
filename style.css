@@ -431,11 +431,13 @@ main li:active .fa-check-circle {
 
 .coeur_plein:hover,
 .coeur_plein:active {
+    transition: opacity 2s;
     opacity: 1;}
 
 .coeur_container:hover .coeur_accueil,
 .coeur_container:active .coeur_accueil {
-    opacity: 0;}
+    opacity: 0;
+    transition: opacity 2s;}
 
 
 
