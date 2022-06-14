@@ -261,7 +261,6 @@ padding-bottom: 50px;}
     display: flex;
     position: absolute;
     font-size: 20px;
-  
     justify-content: flex-end;  }
 
 .fiches_accueil h4{
@@ -317,7 +316,6 @@ button:active{
 }
 #loading_spinner {
     position: sticky;
-    top: 80vh;
     width: 100%;
     background: linear-gradient(to left top, #9356DC, #FF79DA);
     border-radius: 50%;
@@ -326,7 +324,6 @@ button:active{
 
     #loading_spinner_int{
         position: sticky;
-        top: 80vh;
         width: 100%;
         background: linear-gradient(to left top, #FF79DA, #9356DC);
         border-radius: 50%;
@@ -357,9 +354,7 @@ button:active{
             100% {transform:  rotatex(90deg);visibility: visible}   
 
             }
-            #html_index {
-                transform: translateY(-95vw);} 
-               /*  pour eliminer le blanc tout en haut suite à spinner */
+          
 
 .nouveau {
     background-color: #99E2D0;
@@ -438,6 +433,13 @@ main li:active .coche-lateral {
     right: 0;
 }
 
+#spinner_cont{
+
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+}
+
 
 
 main li:hover .plat-desc, 
@@ -462,15 +464,22 @@ main li:active .fa-check-circle {
    .coeur_plein {
 z-index: 1;
  position: absolute;
-    color:#9356DC;
     font-size: 20px;
     opacity: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .coeur_plein:hover,
 .coeur_plein:active {
-    
     opacity: 1;}
+
+    .coeur_container:hover .coeur_accueil,
+    .coeur_container:active .coeur_accueil {
+        opacity: 0;}
+
+
 
     .coeur_container {
         width: 20px;
