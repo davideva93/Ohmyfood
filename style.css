@@ -351,7 +351,10 @@ footer i {
 
 main li{
     position: relative;
-   overflow: hidden;}
+    overflow: hidden;}
+
+.plat-nom{
+    width: 90%;}
 
 .plat-nom, .plat-prix, main ul{
     white-space: nowrap;
@@ -371,7 +374,7 @@ main li{
     position: absolute;
     top: 0;
     right: -20%; /*pour repousser hors <li>, sur la droite (et le cacher grace à "overflow:hidden")*/
-    height: 90%;
+    height: 100%;
     width: 20%;
     background-color: #99E2D0;
     border-bottom-right-radius: 10px;
@@ -399,6 +402,11 @@ main li:active .coche-lateral {
 
 main li:hover .plat-desc, 
 main li:active .plat-desc {
+    transition: width 1s ease-in-out;
+    width: 70%;} /*passe de 90 a 70%*/
+
+main li:hover .plat-nom, 
+main li:active .plat-nom {
     transition: width 1s ease-in-out;
     width: 70%;} /*passe de 90 a 70%*/
 
@@ -438,7 +446,6 @@ main li:active .fa-check-circle {
 img {
     width: 100%;
     max-height: 600px;
-    max-width: 600p;
     object-fit: cover;}
 
 @media (min-width: 660px)  {
