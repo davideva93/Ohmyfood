@@ -11,7 +11,6 @@ body{
 
 main{
     border-radius: 60px 60px 0 0;
-    transform: translate(0, -50px);
     position: relative;
     background-color: rgb(246,246,246);
     padding: 0 20px 30px 20px;}
@@ -85,8 +84,7 @@ h4 {
 
 footer{
     background-color: rgb(53, 53, 53);
-    padding-bottom:30px;
-    transform: translate(0, -50px);}
+    padding-bottom:30px;}
 
 .logo_footer{
     width: 30%;
@@ -230,8 +228,7 @@ form {
     background-color: rgb(246,246,246);
     padding-bottom: 50px;}
 
-#footer_accueil{
-    transform: translate(0 , 0)}
+
 
 .coeur_accueil{
     display: flex;
@@ -316,8 +313,8 @@ button:active{
     visibility: hidden;}
 
 @keyframes spinner_animation {
-    50% {transform: translatey(-100%) rotateY(90deg);visibility: visible; }
-    100% {transform: translatey(-100%) rotatex(90deg);visibility: visible}  }
+    50% {transform: translatey(-100vh) rotateY(90deg);visibility: visible; }
+    100% {transform: translatey(-100vh) rotatex(90deg);visibility: visible}  }
           
 
 .nouveau {
@@ -338,6 +335,8 @@ button:active{
 
 footer i {
     width: 25px;}
+footer a {
+        padding: 0;}
 
 
 #flex_hover {
@@ -373,7 +372,7 @@ main li{
 .coche-lateral {
     position: absolute;
     top: 0;
-    right: -20%; /*pour repousser hors <li>, sur la droite (et le cacher grace à "overflow:hidden")*/
+    right: -20%; /*pour le repousser hors <li>, sur la droite et le cacher (grace à "overflow:hidden")*/
     height: 100%;
     width: 20%;
     background-color: #99E2D0;
@@ -397,7 +396,7 @@ main li:active .coche-lateral {
     width: 100%;
     z-index: 1;
     top:150px; /*optimisé pour mobile*/
-    transform:translatey(100%)
+    transform:translatey(100vh)
 }
 
 main li:hover .plat-desc, 
@@ -447,10 +446,13 @@ main li:active .fa-check-circle {
 
 img {
     width: 100%;
-    max-height: 600px;
+    max-height: 400px;
     object-fit: cover;}
 
 @media (min-width: 660px)  {
+
+.fa-arrow-left-long {
+    transform: scale(2);}
 
 #restaurants_accueil article{
     max-width:300px ;}
@@ -473,5 +475,3 @@ img {
 .flex_fonctionnement h3 {
     width: 40%;} /*amélioration du "fonctionnement" sur grand écran*/
            }
-
-           
